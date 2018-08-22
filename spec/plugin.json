@@ -1,0 +1,18 @@
+{
+    "name": "go-plugin",
+    "version": "0.1.0",
+    "description": "A go plugin management tool",
+    "maintainers": ["szou@vmware.com"],
+    "home": "https://github.com/steven-zou/go-plugin.git",
+    "source": {
+        "mode": "local_so",
+        "path": "sample.so"
+    },
+    "http_services": {
+        "driver": "beego",
+        "routes": [
+            { "route": "/api/plugin/sample/:id", "method": "GET", "label": "plugin.get" },
+            { "route": "/api/plugin/samples", "method": "POST", "label": "plugin.post" }
+        ]
+    }
+}
