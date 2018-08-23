@@ -146,7 +146,12 @@ func PrintError(err error) {
 ```go
 func Execute(ctx context.PluginContext) error {
     label := ctx.GetValue("label")
-    switch label {
+    if label == nil {
+        return errors.New("label is not set in the plugin context")
+    }
+
+    labelV := fmt.Sprintf("%s", label)
+    switch labelV {
         case "case1":
           return call_subMethod1()
         case "case 2":
@@ -159,17 +164,17 @@ func Execute(ctx context.PluginContext) error {
 
 ## Next steps
 
-- [] Package the `plugin.json` and the `so` file as single `*.plg` file (with gzip)
-- [] Build the plugin from source code @git repo
-- [] Monitor and detect the plugin change in the plugin base dir
-- [] Plugin hot upgrade
-- [] Support http service onboarding drivers (beego first)
-- [] Load plugins from internet
-- [] Provide plugin metrics
-- [] Enable API and run as rest services
-- [] Provide GUI for plugin management
-- [] Provided hooks for the lifecycle of plugin
-- [] Add test cases and setup CI/CD
+- [ ] Package the `plugin.json` and the `so` file as single `*.plg` file (with gzip)
+- [ ] Build the plugin from source code @git repo
+- [ ] Monitor and detect the plugin change in the plugin base dir
+- [ ] Plugin hot upgrade
+- [ ] Support http service onboarding drivers (beego first)
+- [ ] Load plugins from internet
+- [ ] Provide plugin metrics
+- [ ] Enable API and run as rest services
+- [ ] Provide GUI for plugin management
+- [ ] Provided hooks for the lifecycle of plugin
+- [ ] Add test cases and setup CI/CD
 
 ## Issues
 
