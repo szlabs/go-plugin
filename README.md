@@ -5,8 +5,8 @@ go-plugin is intent on providing a plugin framework based on the [plugin](https:
 **If you want to do contributions to this project, WELCOME!**
 
 ## Maintainers
-*Steven Zou <loneghost1982@gmail.com> (Originator)
-*Maybe YOU
+* Steven Zou <loneghost1982@gmail.com> (Originator)
+* Maybe YOU
 
 ## Plugin specification
 
@@ -78,6 +78,7 @@ go-plugin use a json file `plugin.json` to define and describe the plugin metada
 ```
 
 The spec details:
+
 |        Field         |      Description       |      Required     |   Supported |
 |----------------------|------------------------|-------------------|-------------|
 |        name          | Name of the plugin     |        Y          |   Y         |
@@ -135,12 +136,12 @@ func PrintError(err error) {
 
 ## Develop a plugin
 
-Step 1: Implement `func Execute(ctx context.PluginContext) error`
-Step 2: Build the plugin with command `go build -buildmode=plugin -o sample.so sample.go`
+* Step 1: Implement `func Execute(ctx context.PluginContext) error`
+* Step 2: Build the plugin with command `go build -buildmode=plugin -o sample.so sample.go`
 
 **NOTES:**
-*If the logic is loop logic in goroutine, please make sure there is an exit way by listening the context done() channel or your goroutine may escape away when unloading the plugin
-*If you need to handle multiple scenarios, just call your sub logic based on some values which are passed by plugin context. e.g:
+* If the logic is loop logic in goroutine, please make sure there is an exit way by listening the context done() channel or your goroutine may escape away when unloading the plugin
+* If you need to handle multiple scenarios, just call your sub logic based on some values which are passed by plugin context. e.g:
 
 ```go
 func Execute(ctx context.PluginContext) error {
@@ -158,18 +159,19 @@ func Execute(ctx context.PluginContext) error {
 
 ## Next steps
 
--[] Package the `plugin.json` and the `so` file as single `*.plg` file (with gzip)
--[] Build the plugin from source code @git repo
--[] Monitor and detect the plugin change in the plugin base dir
--[] Plugin hot upgrade
--[] Support http service onboarding drivers (beego first)
--[] Load plugins from internet
--[] Provide plugin metrics
--[] Enable API and run as rest services
--[] Provide GUI for plugin management
--[] Provided hooks for the lifecycle of plugin
--[] Add test cases and setup CI/CD
+- [] Package the `plugin.json` and the `so` file as single `*.plg` file (with gzip)
+- [] Build the plugin from source code @git repo
+- [] Monitor and detect the plugin change in the plugin base dir
+- [] Plugin hot upgrade
+- [] Support http service onboarding drivers (beego first)
+- [] Load plugins from internet
+- [] Provide plugin metrics
+- [] Enable API and run as rest services
+- [] Provide GUI for plugin management
+- [] Provided hooks for the lifecycle of plugin
+- [] Add test cases and setup CI/CD
 
 ## Issues
-*Currently plugins are only supported on Linux and macOS (Extened from golang plugin)
-*Memory issues if discard a loaded `so`
+
+* Currently plugins are only supported on Linux and macOS (Extened from golang plugin)
+* Memory issues if discard a loaded `so`
