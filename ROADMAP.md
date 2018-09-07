@@ -9,14 +9,14 @@ goplug --help
   --repo <URL> The remote plugin repository url
 ```
 
-`goplug version` : print the SemVer version of the command
-`goplug build <path>` : build go plugin specified by the path or plugins under the folder
-`goplug search <pattern>`: search the specified plugins with the keyword
-`goplug pull <name>`: pull the plugin with the name from the plugin repository to current workdir
-`goplug push <plugin_path>`: push the plugin to the plugin repository
-`goplug delete <name> --auth-token <secret>`: delete the plugin with the name from the repository if existing. A admin secret must be provided.
-`goplug install <name>`: `pull` the plugin with the name to the plugin home dir ($GO_PLUG_HOME or '~/.goplug')
-`goplug run <name> --values <values_map>`: execute the logic of the plugin
+* `goplug version` : print the SemVer version of the command
+* `goplug build <path>` : build go plugin specified by the path or plugins under the folder
+* `goplug search <pattern>`: search the specified plugins with the keyword
+* `goplug pull <name>`: pull the plugin with the name from the plugin repository to current workdir
+* `goplug push <plugin_path>`: push the plugin to the plugin repository
+* `goplug delete <name> --auth-token <secret>`: delete the plugin with the name from the repository if existing. A admin secret must be provided.
+* `goplug install <name>`: `pull` the plugin with the name to the plugin home dir ($GO_PLUG_HOME or '~/.goplug')
+* `goplug run <name> --values <values_map>`: execute the logic of the plugin
 
 ## Library
 
