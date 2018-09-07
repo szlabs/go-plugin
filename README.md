@@ -1,5 +1,5 @@
 # go-plugin
-
+[![CircleCI](https://circleci.com/gh/steven-zou/go-plugin/tree/master.svg?style=svg)](https://circleci.com/gh/steven-zou/go-plugin/tree/master)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/8a5739ff6134411e9c25d69bf539715f)](https://app.codacy.com/app/stevenz/go-plugin?utm_source=github.com&utm_medium=referral&utm_content=steven-zou/go-plugin&utm_campaign=Badge_Grade_Dashboard)
 
 go-plugin is intent on providing a plugin framework based on the [plugin](https://golang.org/pkg/plugin/) feature originated from golang 1.8. go-plugin works in the plugin consumer side to handle related stages of running a plugin, including discover, build, load, upgrade, manage, call and unload.
