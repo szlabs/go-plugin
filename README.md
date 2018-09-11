@@ -5,6 +5,8 @@
 
 go-plugin is intent on providing a plugin framework based on the [plugin](https://golang.org/pkg/plugin/) feature originated from golang 1.8. go-plugin works in the plugin consumer side to handle related stages of running a plugin, including discover, build, load, upgrade, manage, call and unload.
 
+To learn more, check our [roadmap](ROADMAP.md).
+
 **If you want to do contributions to this project, WELCOME!**
 
 ## Maintainers
