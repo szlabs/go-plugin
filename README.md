@@ -52,7 +52,7 @@ type PluginContext interface {
 go-plugin provides a base plugin context for using.
 
 ```go
-import "github.com/steven-zou/go-plugin/pkg/context"
+import "github.com/szlabs/go-plugin/pkg/context"
 
 context.BasePluginContext
 ```
@@ -66,8 +66,8 @@ go-plugin use a json file `plugin.json` to define and describe the plugin metada
     "name": "go-plugin",
     "version": "0.1.0",
     "description": "A go plugin management tool",
-    "maintainers": ["szou@vmware.com"],
-    "home": "https://github.com/steven-zou/go-plugin.git",
+    "maintainers": ["loneghost1982@gmail.com"],
+    "home": "https://github.com/szlabs/go-plugin.git",
     "source": {
         "mode": "local_so",
         "path": "sample.so"
